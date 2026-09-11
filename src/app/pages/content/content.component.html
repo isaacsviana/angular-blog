@@ -4,6 +4,7 @@
   </div>
   <div class="content__title">
     <h1>{{ contentTitle }}</h1>
+    <span class="content__views">👁️ {{ contentViews }} visualizações</span>
     <hr />
   </div>
   <div class="content__description">
@@ -11,5 +12,27 @@
     <p>
       {{ contentDescription }}
     </p>
+  </div>
+
+  <div class="content__comentarios">
+    <h2>Comentários ({{ comentarios.length }})</h2>
+
+    <div class="comentario" *ngFor="let c of comentarios">
+      <strong>{{ c.nome }}</strong>
+      <p>{{ c.texto }}</p>
+    </div>
+
+    <div class="comentario-form">
+      <input
+        type="text"
+        placeholder="Seu nome"
+        [(ngModel)]="nomeComentario"
+      >
+      <textarea
+        placeholder="Escreva seu comentário..."
+        [(ngModel)]="textoComentario"
+      ></textarea>
+      <button (click)="enviarComentario()">Comentar</button>
+    </div>
   </div>
 </div>

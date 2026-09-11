@@ -1,14 +1,164 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
-  background-color: #111111;
-  color:white;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #16151a;
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
 }
 
 a{
   text-decoration: none;
+  color: #e63946;
+}
+
+a:hover{
+  color: #ff6b6b;
+}
+
+/* --- Barra de busca e categorias --- */
+.filtros{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 40px;
+}
+
+.filtros__busca{
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1f1e24;
+  color: white;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.filtros__categorias{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filtros__categorias button{
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e63946;
+  background-color: transparent;
+  color: #e63946;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.filtros__categorias button:hover,
+.filtros__categorias button.ativo{
+  background-color: #e63946;
+  color: white;
+}
+
+.sem-resultado{
+  padding: 40px;
+  text-align: center;
+  color: #999;
+}
+
+/* --- Contador de views --- */
+.content__views{
+  display: block;
+  font-size: 13px;
+  color: #999;
+  margin: 6px 0;
+}
+
+/* --- Comentários --- */
+.content__comentarios{
+  margin-top: 30px;
+  padding: 0 40px 40px;
+}
+
+.content__comentarios h2{
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.comentario{
+  background-color: #1f1e24;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.comentario strong{
+  color: #e63946;
+  font-size: 14px;
+}
+
+.comentario p{
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.comentario-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.comentario-form input,
+.comentario-form textarea{
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1f1e24;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.comentario-form textarea{
+  min-height: 80px;
+  resize: vertical;
+}
+
+.comentario-form button{
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.comentario-form button:hover{
+  background-color: #ff6b6b;
+}
+
+/* --- Página Sobre --- */
+.container__about{
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.container__about h1{
+  margin-bottom: 12px;
+}
+
+.container__about hr{
+  border: none;
+  border-top: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.container__about p{
+  margin-bottom: 16px;
+  line-height: 1.6;
 }
